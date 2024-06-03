@@ -19,7 +19,7 @@ function replaceMention(value: string, username: string) {
 
 	const children: Node[] = [{ type: "text", value: value.trim() }];
 
-	if (username === "notgr") {
+	if (username === "fredabila") {
 		children.push({
 			type: "element",
 			tagName: "span",

@@ -28,14 +28,14 @@ async function sendEmail(verification: EmailVerificationRequest) {
 	const { email, token } = verification;
 
 	const link = [
-		`https://${subdomain}.compa.so/verify-email/?`,
+		`https://${subdomain}.buzzchat.site/verify-email/?`,
 		`email=${email}`,
 		`&token=${token}`,
 	].join("");
 
 	return await send({
 		to: verification.email,
-		from: "m@compa.so",
+		from: "webmaster@umat.buzzchat.site",
 		subject: "Account verification ✽ compa",
 		text: `Hi and welcome to compa,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
